@@ -10,6 +10,7 @@
     height: 520px;
     border: 2px solid #ccc;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 .sonic {
@@ -18,14 +19,44 @@
     width: 150px;
 }
 
+.jump {
+    animation: sonic_animation 1s infinite ease-out;
+
+}
+
 .eggman {
     position: absolute;
     width: 250px;
     bottom: 110px;
     right: 0;
+    animation: eggman_animation 1.5s infinite linear;
 }
 
 .background {
     width: 100%;
     height: 100%;
+}
+
+@keyframes eggman_animation {
+    0% {
+        right: -250px;
+    }
+    100% {
+        right: 100%;
+    }
+}
+
+@keyframes sonic_animation {
+    0% {
+        bottom: 110px;
+    }
+    25% {
+        bottom: 250px;
+    }
+    75% {
+        bottom: 250px;
+    }
+    100% {
+        bottom: 110px;
+    }
 }
